@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import PlayMarket from "../images/googlePlayBtn.png";
-import AppStore from "../images/AppStoreBtn.png";
+import PlayMarket from "../../assets/images/googlePlayBtn.png";
+import AppStore from "../../assets/images/AppStoreBtn.png";
 import { Link } from "react-router-dom";
 import Pays from "../../assets/images/payLogos.svg";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
