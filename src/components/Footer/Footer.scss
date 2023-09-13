@@ -18,7 +18,7 @@ footer {
     }
   }
 
-  ul {
+  ul.info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -28,29 +28,50 @@ footer {
 
       a {
         color: white;
+        transition: 0.2s;
 
         &:hover {
-            color: red;
+          color: red;
+          transition: 0.2s;
         }
       }
     }
   }
 
-  .pays {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    p {
-      color: white;
-      margin-bottom: 15px;
-    }
-  }
-  .contact {
+  ul.contactInfo {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: white;
+    margin-bottom: 15px;
+
+    li a {
+      color: white;
+      transition: 0.2s;
+
+      &:hover {
+        color: crimson;
+        transition: 0.2s;
+      }
+
+      svg {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .phoneNumber {
+    a {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+
+      &:hover {
+        color: crimson;
+        text-decoration: underline;
+        transition: 0.2s;
+      }
+    }
   }
 }

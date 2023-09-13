@@ -13,33 +13,48 @@ footer .downloads {
 footer .downloads img:first-child {
   margin-bottom: 15px;
 }
-footer ul {
+footer ul.info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-footer ul li {
+footer ul.info li {
   margin-bottom: 15px;
 }
-footer ul li a {
+footer ul.info li a {
   color: white;
+  transition: 0.2s;
 }
-footer ul li a:hover {
+footer ul.info li a:hover {
   color: red;
+  transition: 0.2s;
 }
-footer .pays {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-footer .pays p {
-  color: white;
-  margin-bottom: 15px;
-}
-footer .contact {
+footer ul.contactInfo {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 15px;
+}
+footer ul.contactInfo li a {
   color: white;
+  transition: 0.2s;
+}
+footer ul.contactInfo li a:hover {
+  color: crimson;
+  transition: 0.2s;
+}
+footer ul.contactInfo li a svg {
+  font-size: 30px;
+}
+footer .phoneNumber a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+footer .phoneNumber a:hover {
+  color: crimson;
+  text-decoration: underline;
+  transition: 0.2s;
 }/*# sourceMappingURL=Footer.css.map */

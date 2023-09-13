@@ -4,11 +4,23 @@ import Grid from "@mui/material/Grid";
 import PlayMarket from "../images/googlePlayBtn.png";
 import AppStore from "../images/AppStoreBtn.png";
 import { Link } from "react-router-dom";
-import Pays from "../images/payLogos.svg";
+import Pays from "../../assets/images/payLogos.svg";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import "./Footer.css";
 
 function Footer() {
+  const footerMenu = ["Biz haqimizda", "Foydalanish shartlari", "FAQ"];
+
+  const contactMedia = [
+    <FacebookIcon />,
+    <InstagramIcon />,
+    <TelegramIcon />,
+    <YouTubeIcon />,
+  ];
   return (
     <footer>
       <Container>
@@ -33,37 +45,39 @@ function Footer() {
           </Grid>
 
           <Grid item lg={2}>
-            <ul>
-              <li>
-                <Link>Агентствам</Link>
-              </li>
-              <li>
-                <Link>О компании</Link>
-              </li>
-              <li>
-                <Link>Публичная оферта</Link>
-              </li>
-              <li>
-                <Link>Договор комиссии</Link>
-              </li>
+            <ul className="info">
+              {footerMenu.map((element) => {
+                return (
+                  <li>
+                    <Link>{element}</Link>
+                  </li>
+                );
+              })}
             </ul>
           </Grid>
 
-          <Grid item lg={2}>
-            <div className="pays">
-              <p>Принимаем к оплате</p>
+          <Grid sx={{
+            textAlign: 'center'
+          }} item lg={2}>
 
-              <img src={Pays} alt="" />
-            </div>
-          </Grid>
+            <ul className="contactInfo">
+              {contactMedia.map((element, value) => {
+                return (
+                  <li>
+                    <Link>{element}</Link>
+                  </li>
+                );
+              })}
+            </ul>
 
-          <Grid item lg={1.6}>
-            <Link>
-              <div className="contact">
+            <div className="phoneNumber" style={{
+              textAlign: 'center'
+            }}>
+              <Link>
                 <LocalPhoneIcon />
                 +998711002021
-              </div>
-            </Link>
+              </Link>
+            </div>
           </Grid>
         </Grid>
       </Container>
